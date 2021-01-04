@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/id_Text_IPAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/Set_IP_Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/id_Button_SetIPAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:onClick="buttonHandler_setServerIPAddress"
+        android:text="@string/Set_IP_Button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id_Text_IPAddress"
+        app:layout_constraintStart_toEndOf="@+id/id_Text_IPAddress" />
+
+    <EditText
+        android:id="@+id/id_Text_portNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:onClick="buttonHandler_setPortNumber"
+        android:text="@string/Set_Port_Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_Text_IPAddress" />
+
+    <Button
+        android:id="@+id/id_Button_SetPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:onClick="buttonHandler_setPortNumber"
+        android:text="@string/Set_Port"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id_Text_portNumber"
+        app:layout_constraintStart_toEndOf="@+id/id_Text_portNumber" />
+
+    <Button
+        android:id="@+id/id_Button_Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:onClick="buttonHandler_Connect"
+        android:text="@string/Connect_Button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id_Button_SetIPAddress"
+        app:layout_constraintStart_toEndOf="@+id/id_Button_SetIPAddress" />
+
+    <Button
+        android:id="@+id/id_Button_getTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:onClick="buttonHandler_GetTime"
+        android:text="@string/Time_Button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id_Button_SetIPAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_Button_Connect" />
+
+    <Button
+        android:id="@+id/id_Button_Disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:onClick="buttonHandler_Disconnect"
+        android:text="@string/Disconnect_Button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id_Text_portNumber"
+        app:layout_constraintStart_toEndOf="@+id/id_Button_SetPort" />
+
+    <Button
+        android:id="@+id/id_Button_getTemperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="buttonHandler_GetTemperature"
+        android:text="@string/Temperature_Button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id_Button_Disconnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_Button_Disconnect" />
+
+    <Switch
+        android:id="@+id/id_switch_LED1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="48dp"
+        android:onClick="switchHandler_LED1"
+        android:text="@string/LED_1_Label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_Text_portNumber" />
+
+    <Switch
+        android:id="@+id/id_switch_LED2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="16dp"
+        android:onClick="switchHandler_LED2"
+        android:text="@string/LED_2_Label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_switch_LED1" />
+
+    <Switch
+        android:id="@+id/id_switch_LED3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="18dp"
+        android:onClick="switchHandler_LED3"
+        android:text="@string/LED_3_Label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_switch_LED2" />
+
+    <Switch
+        android:id="@+id/id_switch_LED4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="18dp"
+        android:onClick="switchHandler_LED4"
+        android:text="@string/LED_4_Label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_switch_LED3" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="38dp"
+        android:onClick="buttonHandler_PB1"
+        android:text="@string/pb1_label"
+        app:layout_constraintStart_toEndOf="@+id/id_switch_LED1"
+        app:layout_constraintTop_toBottomOf="@+id/id_Text_portNumber" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:onClick="buttonHandler_PB3"
+        android:text="@string/pb3_label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id_switch_LED4"
+        app:layout_constraintStart_toEndOf="@+id/id_switch_LED4" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="buttonHandler_PB2"
+        android:text="@string/pb2_label"
+        app:layout_constraintBottom_toTopOf="@+id/button15"
+        app:layout_constraintStart_toEndOf="@+id/id_switch_LED2"
+        app:layout_constraintTop_toBottomOf="@+id/button14" />
+
+    <TextView
+        android:id="@+id/id_text_PB1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:text="@string/pushButton_up_Text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button14"
+        app:layout_constraintStart_toEndOf="@+id/button14" />
+
+    <TextView
+        android:id="@+id/id_text_PB2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:text="@string/pushButton_up_Text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button16"
+        app:layout_constraintStart_toEndOf="@+id/button16" />
+
+    <TextView
+        android:id="@+id/id_text_PB3Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:text="@string/pushButton_up_Text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button15"
+        app:layout_constraintStart_toEndOf="@+id/button15" />
+
+    <EditText
+        android:id="@+id/id_Text_ServerMessages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:editable="false"
+        android:ems="10"
+        android:freezesText="true"
+        android:gravity="start|top"
+        android:overScrollMode="always"
+        android:scrollbarSize="16dp"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toEndOf="@+id/id_text_PB1Label"
+        app:layout_constraintTop_toBottomOf="@+id/id_Button_Disconnect"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

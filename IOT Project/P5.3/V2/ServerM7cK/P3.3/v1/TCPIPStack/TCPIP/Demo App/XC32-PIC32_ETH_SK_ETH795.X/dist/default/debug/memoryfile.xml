@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/default/debug/XC32-PIC32_ETH_SK_ETH795.X.debug.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>531968</length>                 
+      <used>100080</used>                     
+      <free>431888</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>131584</length>                 
+      <used>34888</used>                     
+      <free>96696</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 

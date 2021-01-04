@@ -1,0 +1,24 @@
+<resources>
+    <string name="M7cK_Server">AndroidGUI</string>
+    <string name="Set_IP_Button">Set IP Address</string>
+    <string name="Set_Port">Set Port</string>
+
+    <string name="Set_IP_Text">10.0.2.2</string>
+    <string name="Set_Port_Text">7777</string>
+
+    <string name="Disconnect_Button">Disconnect</string>
+    <string name="Connect_Button">Connect</string>
+    <string name="Time_Button">Get Time</string>
+    <string name="Temperature_Button">Get Temperature</string>
+    <string name="pb1_label">PB1 Status</string>
+    <string name="pb2_label">PB2 Status</string>
+    <string name="pb3_label">PB3 Status</string>
+    <string name="LED_1_Label">LED 1</string>
+    <string name="LED_2_Label">LED 2</string>
+    <string name="LED_3_Label">LED 3</string>
+    <string name="LED_4_Label">LED 4</string>
+
+    <string name="pushButton_up_Text">UP</string>
+    <string name="pushButton_down_Text">DOWN</string>
+
+</resources>
