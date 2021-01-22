@@ -4,4 +4,4 @@ IOT Project: Client (PC or Android)-Server(Mx7CK Board or any PC)-ProxyServer Ne
 Please Watch the video and you'll see an overview of the project.
 Warning the video is "in ultra speed x4"
 
-Lastly, Folder 5.2 is what haves the latest version of everything.
+Lastly, Folder 5.3/V2 is what haves the latest version of everything.
